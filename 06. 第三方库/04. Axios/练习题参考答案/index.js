@@ -1,5 +1,5 @@
 /**
- * 参考接口文档：http://mock.duyiedu.com/project/72/interface/api
+ * 参考接口文档：https://app.apifox.com/project/2429576
  * 完成下面的api函数
  * 并对每个函数进行调用测试
  * 需要统一处理的地方：
