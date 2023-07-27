@@ -42,6 +42,13 @@
     </style>
     <style>
       /* 在这里完成作业 */
+      .menu{
+        overflow: hidden;
+      }
+      .sub-menu{
+        height: 0;
+        transition: all 0.3s;
+      }
     </style>
   </head>
   <body>
@@ -89,4 +96,29 @@
       </div>
     </div>
   </body>
+
+  <script>
+    const menus = document.querySelectorAll('.menu');
+    Array.from(menus).forEach((menu) => {
+      const btn = menu.getElementsByTagName('h2')[0];
+      btn.onclick = function() {
+        handleChick.call(this);
+      Array.from(document.getElementsByClassName('sub-menu')).forEach((subMenu) => {
+        if(subMenu !== this.nextElementSibling) {
+          subMenu.style.height = '0'
+        }
+      })
+      }
+    })
+
+    function handleChick () {
+        var allSubMenus = document.getElementsByClassName('sub-menu');
+        const subMenu = this.nextElementSibling;
+        if (subMenu.clientHeight) {
+          subMenu.style.height = '0';
+        } else {
+          subMenu.style.height = '150px';
+        }
+    }
+  </script>
 </html>

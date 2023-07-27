@@ -21,6 +21,10 @@
     </style>
     <style>
       /* 在这里完成作业 */
+      .box{
+        border-radius: 50%;
+        transition: 0.3s linear;
+      }
     </style>
   </head>
   <body>
@@ -28,4 +32,13 @@
     <p>在屏幕上点击任意位置试一试</p>
     <p>此效果需要用到JS</p>
   </body>
+
+  <script>
+    const ball = document.getElementById('ball');
+    document.onclick= function (e) {
+      const y = e.clientY - 15;
+      const x = e.clientX  - 15;
+      ball.style.transform = `translate(${x}px, ${y}px)`
+    }
+  </script>
 </html>

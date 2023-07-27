@@ -16,6 +16,20 @@
     </style>
     <style>
       /* 在这里完成作业 */
+
+      .ball {
+        border-radius: 50%;
+        animation: jump 0.3s ease-in-out infinite alternate;
+      }
+
+      @keyframes jump  {
+        to {
+          transform: scale(1, 0.7);
+        }
+        from {
+           transform: scale(0.7,1.4) translateY(-100px);
+        }
+      }
     </style>
   </head>
   <body>
